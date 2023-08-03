@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 N = int(input())
 # 스타트 포인터와 엔드 포인터 만들어주기
-start = 0
+start = 1
 end = 1
 # 가능한 가지수를 저장하는 변수
 cnt = 0 
@@ -11,6 +11,7 @@ cnt = 0
 sum = 0
 # 포인터가 움직일 배열 생성
 li = [i for i in range(1,N+1)]
+li = [0] + li
 sum = li[start] + li[end]
 
 while end != N:
