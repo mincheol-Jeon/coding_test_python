@@ -1,12 +1,11 @@
-import sys
-input = sys.stdin.readline
-
+from collections import deque 
 N = int(input())
-stack = [i for i in range(1,N+1)]
-stack.reverse()
-while len(stack) != 1:
-    stack.pop()
-    bottom = stack.pop()
-    stack.insert(0,bottom)
+MyQueue = deque()
 
-print(*stack)
+for i in range(1,N+1):
+    MyQueue.append(i)
+while len(MyQueue) > 1:
+    MyQueue.popleft()
+    MyQueue.append(MyQueue.popleft())
+
+print(*MyQueue)
