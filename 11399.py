@@ -10,5 +10,5 @@ sum = [A[i]*(N-i) for i in range(len(A))]
 result = 0
 for i in sum:
     result += i
+
 print(result)
-print("Done")
