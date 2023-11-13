@@ -1,0 +1,6 @@
+*.DS_Store
+*.zip
+*.csv
+*.pdf
+
+/fast_campus
