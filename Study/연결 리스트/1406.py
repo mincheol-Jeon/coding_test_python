@@ -1,22 +1,18 @@
 # 1406 S2
-right = []
+from sys import stdin
 left = list(input())
-num = int(input())
+right = []
 
-for i in range(num):
-    t = input()
-    if 'P' in t:
-        plus = t.split(' ')[1]
-        left.append(plus)
-        # plus가 특정 위치에 추가되어야함
-    elif t == 'L':
-        # 커서가 왼쪽으로 움직이기
+for i in range(int(input())):
+    t = list(stdin.readline().split())
+    if t[0] == 'P':
+        left.append(t[1])
+    elif t[0] == 'L' and left:
         right.append(left.pop())
-    elif t == 'B':
+    elif t[0] == 'B'and left:
         left.pop()
-        # 커서의 왼쪽 삭제하기
-    elif t == 'D':
+    elif t[0] == 'D' and right:
         left.append(right.pop())
-        # 커서가 오른쪽으로 움직이기    
+          
 answer = left + right[::-1]
 print(''.join(answer))
