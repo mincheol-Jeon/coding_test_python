@@ -3,7 +3,8 @@
 N = int(input())
 heights = list(map(int,input().split()))
 stack = []
-answer = []
+# 초기값 설정
+answer = [0] * N
 
 for i in range(N):
     # 문제 풀이 방법
